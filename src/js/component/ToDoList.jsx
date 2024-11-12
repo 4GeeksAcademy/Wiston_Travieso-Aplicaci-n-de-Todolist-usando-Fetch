@@ -22,7 +22,7 @@ const ToDoList = () => {
             .catch((err) => { console.log(err) })
     }
 
-
+    console.log()
     function addTask(inputValue, e) {
         setTodos(todos.concat(inputValue))
         e.target.value = ""

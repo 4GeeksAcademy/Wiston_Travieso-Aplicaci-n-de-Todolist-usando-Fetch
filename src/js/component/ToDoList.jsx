@@ -17,12 +17,10 @@ const ToDoList = () => {
             .then(data => {
                 setTodos(data.todos);
                 console.log(data);
-
             })
             .catch((err) => { console.log(err) })
     }
 
-    console.log()
     function addTask(inputValue, e) {
         setTodos(todos.concat(inputValue))
         e.target.value = ""
@@ -75,14 +73,12 @@ const ToDoList = () => {
                 </input>
 
                 <ul className="list-group">
-
                     {todos.map((task, index) => (
                         <li className="list-group-item" key={index}
                         >{task}  <button type="button" class="btn btn-dark"
                             onClick={(e) =>
                                 deleteTask(task, index)}
                         >X</button>
-
                         </li>
                     ))}
                     <div className="text-align-right">
